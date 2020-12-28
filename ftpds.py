@@ -30,7 +30,7 @@ def main():
     # requires SSL for both control and data channel
     handler.tls_control_required = True
     handler.tls_data_required = True
-    server = FTPServer(('', 1025), handler)
+    server = FTPServer(('', 21), handler)
     server.serve_forever()
 
 if __name__ == '__main__':

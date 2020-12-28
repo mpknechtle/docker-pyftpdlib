@@ -2,12 +2,14 @@ FROM python:3.8
 
 MAINTAINER Marc-Philipp Knechtle "mpknechtle@gmail.com"
 
-COPY . /app
-WORKDIR /app
+USER ftps
+
+COPY . /home/ftps
+WORKDIR /home/ftps
 RUN pip install -r requirements.txt
 
-RUN mkdir /home/ftps
+RUN mkdir /home/ftps/share
 
-EXPOSE 1025
+EXPOSE 21
 
 CMD python3 ftpds.py
