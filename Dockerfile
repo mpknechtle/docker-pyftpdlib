@@ -6,9 +6,7 @@ COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 
-# RUN mkdir /ftp_root
-# RUN mkdir /ftp_root/nobody
-# RUN mkdir /ftp_root/user
+RUN mkdir /home/ftps
 
 EXPOSE 1025
 
